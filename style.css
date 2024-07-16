@@ -13,6 +13,7 @@
   --text-color: #ffffff;
   /* --main-color: #ff9900; */
   --main-color: #ef6c00;
+  /* --main-color: turquoise; */
   /* --main-color: purple; */
 
   --primary-bg-color: #0b0b0b;
@@ -96,7 +97,7 @@ body {
   box-shadow: -2px 0 10px 0 var(--text-color);
   width: 30%;
   max-width: 10rem;
-  height: 100%;
+  height: 100vh;
   position: relative;
   transition: all 0.8s ease;
 }
@@ -256,7 +257,9 @@ body {
 .education,
 .certificates,
 .contact {
-  background: url(images/bg_noise.png);
+  background: url(images/bg_noise.png) repeat;
+  background-attachment: fixed;
+
 }
 
 /* banner styling for each section */
@@ -279,7 +282,7 @@ body {
   display: flex;
   align-items: center;
   padding-left: 2rem;
-  background: url(images/banner.jpg) no-repeat center;
+  background: url(images/bg_main.jpg) no-repeat center;
   background-size: cover;
   height: 100vh;
   /* min-height: 500px; */
@@ -441,7 +444,7 @@ body {
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-evenly;
-  margin-right: 2.5rem;
+  /* margin-right: 2.5rem; */
 }
 
 .projects .projects-content .project-card {
@@ -495,8 +498,72 @@ body {
 /* skills section styling */
 
 .skills {
-  height: 100vh;
+  min-height: 100vh;
 }
+
+.skills .skills-group{
+  margin: 1rem;
+  margin-right: 3rem;
+  padding: 0.5rem;
+  border: 2px solid var(--main-color);
+  background: var(--bg-noise-img);
+  background-color: var(--secondry-bg-color);
+  border-radius: 10px;
+}
+
+.skills .skills-group h2{
+  padding: 0.25rem;
+  font-size: 2rem;
+  font-weight: 500;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.skills .skills-group .skills-group-items {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.skills .skills-group .skills-group-items .skills-group-items-item {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.skills .skills-group .skills-group-items .skills-group-items-item:hover{
+  border: 2px solid var(--main-color);
+  border-radius: 20px;
+  filter: drop-shadow(0 0 5px var(--main-color));
+  transition: 0.5s;
+  background-color: var(--primary-bg-color);
+  img{
+    transform: scale(0.8);
+  }
+  h3{
+    transition: all 0.3s;
+    color: var(--text-color);
+  }
+}
+
+.skills .skills-group .skills-group-items .skills-group-items-item img{
+  margin: 0.25rem;
+  height: 5rem;
+  transition: 0.5s;
+}
+
+.skills .skills-group .skills-group-items .skills-group-items-item h3{
+  text-align: center;
+  color: var(--main-color);
+  font-weight: 200;
+}
+
 
 /* education section styling */
 
@@ -560,6 +627,10 @@ body {
     display: none;
   }
 
+  .skills .skills-group{
+    margin-right: 1rem;
+  }
+
   .section-banner {
     background-color: var(--main-color);
     height: 3.5rem;
@@ -592,6 +663,7 @@ body {
   }
   .mobile-name-banner h2{
     font-size: 1rem;
+    margin: 0.25rem 0;
     font-weight: 100;
     color: var(--text-color);
   }
