@@ -423,14 +423,15 @@ body {
   border-radius: 1rem;
   margin-top: 2rem;
   padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .about .about-content .right a:hover {
   color: var(--main-color);
   background: none;
-  transition: all 0.3s ease;
-  filter: drop-shadow(5px 5px 80px var(--main-color));
+  transition: all 0.5s ease;
+  box-shadow: 0px 0px 15px var(--main-color),0px 0px 5px var(--main-color) inset;
+  /* filter: drop-shadow(5px 5px 20px var(--main-color)); */
   transition: 1s;
 }
 
@@ -529,18 +530,22 @@ body {
   margin: 1rem 0.5rem;
   padding: 0.5rem;
   cursor: pointer;
-  border: 2px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: 1s;
+  border: 1.5px;
+  border-style: dashed;
+  border-color: var(--main-color);
+  border-radius: 1rem;
 }
 
 .skills .skills-group .skills-group-items .skills-group-items-item:hover{
-  border: 2px solid var(--main-color);
+  border: 1.5px solid var(--main-color);
   border-radius: 20px;
-  filter: drop-shadow(0 0 5px var(--main-color));
+  box-shadow: 0 0 10px var(--main-color) inset;
+  filter: drop-shadow(0 0 10px var(--main-color) );
   transition: 0.5s;
   background-color: var(--primary-bg-color);
   img{
@@ -549,6 +554,8 @@ body {
   h3{
     transition: all 0.3s;
     color: var(--text-color);
+    border-top: 1px solid var(--main-color);
+
   }
 }
 
@@ -560,8 +567,13 @@ body {
 
 .skills .skills-group .skills-group-items .skills-group-items-item h3{
   text-align: center;
+  width: 100%;
   color: var(--main-color);
   font-weight: 200;
+  margin-top: 0.2rem;
+  /* padding: 0.25rem; */
+  border-top: 1px dashed var(--main-color);
+
 }
 
 
