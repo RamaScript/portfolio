@@ -437,6 +437,73 @@ body {
   transition: 1s;
 }
 
+.age-section{
+  background: var(--bg-noise-img);
+  background-color: var(--text-color);
+  border: 0.5px solid var(--main-color);
+  /* border-radius: 2rem; */
+}
+
+.age-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.age {
+  margin: 1.5rem;
+  height: 6.5rem;
+  width: fit-content;
+  display: flex;
+  padding: 1rem;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  /* border: 2px solid var(--main-color); */
+  border-radius: 1rem;
+  background: var(--bg-noise-img);
+  background-color: var(--nav-color);
+}
+
+.age .a-box {
+  margin: 0.5rem;
+  padding: 0.2rem;
+  padding-bottom: 0;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 6.5rem;
+  width: 4.5rem;
+}
+
+.age .a-box .a-in-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  width: 4.5rem;
+  background-color: var(--secondry-bg-color);
+  border-radius: 5px;
+  /* margin-bottom: 10px; */
+}
+
+.age .a-box .a-in-box p {
+  font-size: 3rem;
+}
+
+.age .a-box > p {
+  font-size: 1.25rem;
+  font-weight: 100;
+  color: var(--home-color);
+} 
+
+
+
 /* project section styling */
 
 .projects .projects-content {
@@ -723,7 +790,7 @@ body {
   .mobile-name-banner {
     display: inline-block;
     width: 100%;
-    height: 11%;
+    /* height: 11%; */
     text-align: center;
     position: absolute;
     /* background: var(--bg-noise-img); */
