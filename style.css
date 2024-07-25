@@ -832,12 +832,12 @@ body {
     font-size: 1rem;
   }
 }
-/* @media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px){
   .mobile-name-banner {
     width: 98%;
     background-color: red;
   }
-} */
+}
 /* mobile menu */
 @media only screen and (max-width: 900px) {
   .sm-icons {
@@ -876,7 +876,7 @@ body {
     font-size: 10px;
     z-index: 2;
     filter: drop-shadow(1px 1px 10px var(--nav-color));
-    border-radius: 2rem;
+    border-radius: 1rem;
   }
   .mobile-name-banner h1 {
     font-size: 1.5rem;
