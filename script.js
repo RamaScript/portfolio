@@ -10,15 +10,7 @@ mode.addEventListener("click", () => {
   }
 });
 
-// let logo = document.querySelector(".logo");
 
-// if (window.innerWidth < 800) {
-//   console.log(logo);
-//   logo.innerHTML = '';
-//   logo.classList.remove("logo");
-// } else {
-//   logo.classList.add("logo");
-// }
 
 // typing text animation script
 function startTypingAnimation(selector, strings) {
@@ -56,7 +48,7 @@ function calculateAge(dob) {
   if (hours < 0) {
       hours += 24;
       days--;
-  }
+  } 
   if (days < 0) {
       const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0);
       days += lastMonth.getDate();
