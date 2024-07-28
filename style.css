@@ -439,7 +439,7 @@ body {
   color: var(--secondry-bg-color);
   background-color: var(--main-color);
   border: 0.15rem solid var(--main-color);
-  border-radius: 1rem;
+  border-radius: 10px 10px 40px 10px;
   margin-top: 2rem;
   padding: 0.5rem 1rem;
   transition: all 0.8s ease;
@@ -753,6 +753,143 @@ body {
 
 .contact {
   min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact-content {
+  display: flex;
+  margin: 3rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+
+.contact .contact-content .column {
+  width: 45%;
+  padding: 1rem;
+  height: 90%;
+}
+
+.contact .contact-content .text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.contact .contact-content .left p {
+  font-size: 1.2rem;
+  line-height: 1.75rem;
+  word-spacing: 2px;
+  text-align: justify;
+  font-weight: 100;
+}
+
+.contact .contact-content .left .icons {
+  margin: 0.75rem 0;
+}
+
+.contact .contact-content .left .icons .row {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  /* margin: 0.5rem 0; */
+}
+
+.contact .contact-content .left .icons .row .info {
+  margin-left: 2rem;
+}
+
+.contact .contact-content .left .icons .row i {
+  font-size: 1.75rem;
+  width: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+}
+
+.contact .contact-content .left .icons .row .info .head {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.contact .contact-content .info .sub-title {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+
+.contact .right form .fields {
+  display: flex;
+  margin-bottom: -0.75rem;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field,
+.contact .right form .textarea {
+  height: 3rem;
+  margin: 0.75rem 0;
+}
+
+.contact .right form .fields .name {
+  display: flex;
+  width: 100%;
+  margin-right: 0.5rem;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1.5px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: white;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+  border-color: var(--main-color);
+}
+
+.contact .right form .textarea textarea {
+  padding-top: 0.75rem;
+  resize: none;
+}
+
+.contact .right form .button-area {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.right form .button-area button {
+  color: var(--home-color);
+  display: block;
+  width: 10rem !important;
+  height: 3rem;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: var(--main-color);
+  border: 2px solid var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.right form .button-area button:hover {
+  color: var(--main-color);
+  background: none;
 }
 
 /* responsivenesss */
@@ -786,6 +923,17 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     color: var(--main-color);
+  }
+  
+}
+
+@media only screen and (max-width: 700px) {
+  .contact-content{
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .contact .contact-content .column {
+    width: 90%
   }
 }
 
@@ -866,6 +1014,7 @@ body {
     padding: 0.5rem;
     font-size: 1rem;
   }
+  
 }
 
 /* ========== About Section Responsivenesss END ========== */
