@@ -12,14 +12,11 @@
   --bg-img: url(images/bg_noise.png);
   --home-bg: url(images/bg_main.jpg);
   --text-color: #ffffff;
-  /* --main-color: #ff9900; */
   --main-color: #ef6c00;
-  /* --main-color: turquoise; */
-  /* --main-color: purple; */
 
   --primary-bg-color: #0b0b0b;
   --secondry-bg-color: #232323;
-  --nav-hover-color: #515050;
+  --nav-hover-color: rgb(55, 55, 55);
   --nav-color: #232323;
 }
 
@@ -145,6 +142,22 @@ body {
   padding-left: 0.25rem;
 }
 
+.nav ul li a.active {
+  display: block;
+  margin: -0.5rem;
+  font-weight: 500;
+  color: var(--main-color);
+  margin-left: -0.5rem;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  border-left: 0.25rem solid var(--main-color);
+  border-radius: 5px;
+  transition: 0.3s;
+  background-color: var(--primary-bg-color);
+  i {
+    transform: scale(1.3);
+  }
+}
+
 .nav ul li {
   margin: 0.4rem 0px;
   list-style: none;
@@ -154,7 +167,7 @@ body {
 }
 
 .nav ul li:hover {
-  border-left: 0.25rem solid var(--main-color);
+  border-left: 0.25rem dotted var(--main-color);
   background-color: var(--nav-hover-color);
   transform: scaley(1.2);
   transform: scaleZ(1.2);
@@ -163,6 +176,9 @@ body {
   .nav-icons {
     transform: scale(1.2);
     transition: all 0.1s ease;
+  }
+  .active {
+    border: 0;
   }
 }
 
@@ -253,6 +269,7 @@ body {
   min-height: 100vh;
   overflow-y: scroll;
   scrollbar-width: none;
+  width: 100%;
 }
 
 .home,
@@ -442,7 +459,7 @@ body {
 
 .age-section {
   /* background: var(--bg-noise-img); */
-  background-image : linear-gradient(var(--main-color) -100% ,var(--nav-color));
+  background-image: linear-gradient(var(--main-color) -100%, var(--nav-color));
   background-color: var(--secondry-bg-color);
   /* background-image: radial-gradient(
     circle,
@@ -475,12 +492,11 @@ body {
   background: var(--bg-noise-img);
   background-color: var(--nav-color);
   box-shadow: 0px 0px 90px var(--primary-bg-color);
-
 }
 
 .age .a-box {
   margin: 0 0.5rem;
-  padding:  0.2rem;
+  padding: 0.2rem;
   padding-bottom: 0;
   background-color: var(--main-color);
   border-radius: 5px;
@@ -546,6 +562,7 @@ body {
   img {
     transform: scale(0.9);
     transition: 0.3s ease;
+    /* filter: drop-shadow(0px 0px 20px 1px var(--main-color)); */
     box-shadow: 0px 0px 20px 1px var(--main-color);
   }
 }
@@ -614,15 +631,15 @@ body {
   justify-content: center;
   flex-direction: column;
   transition: 1s;
-  border: 1.5px;
-  border-style: dashed;
+  border: 2px;
+  border-style: dotted;
   border-color: var(--main-color);
   border-radius: 1rem;
 }
 
 .skills .skills-group .skills-group-items .skills-group-items-item:hover {
-  border: 1.5px solid var(--main-color);
-  border-radius: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 1.75rem;
   box-shadow: 0 0 10px var(--main-color) inset;
   filter: drop-shadow(0 0 10px var(--main-color));
   transition: 0.5s;
@@ -681,8 +698,9 @@ body {
   transition: all 0.5s ease;
   background: var(--bg-noise-img);
   /* background-color: var(--nav-color); */
-  border: 3px dashed var(--main-color);
+  border: 5px dotted var(--main-color);
   border-radius: 1rem;
+  overflow: hidden;
   /* box-shadow: 0 0 20px var(--main-color) inset; */
 }
 
@@ -690,14 +708,15 @@ body {
   background: var(--bg-img);
   background-color: var(--secondry-bg-color);
   box-shadow: 0 0 30px var(--main-color), 0 0 20px var(--main-color) inset;
-  border: 3px solid var(--main-color);
-  transition: all 0.8s ease;
-
+  border: 5px solid var(--main-color);
+  border-radius: 2rem;
+  transition: all 1s ease;
   /* i {
     color: var(--nav-color);
   } */
   .box {
     transform: scale(1.1);
+    transition: 0.5s;
   }
 }
 
@@ -741,7 +760,6 @@ body {
 /* ========== Age Timer Responsiveness Start ========== */
 
 @media only screen and (max-width: 700px) {
-  
   .age {
     margin: 0.5rem;
     padding: 0.5rem;
@@ -772,7 +790,6 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-  
   .age-section {
     height: 4.5rem;
     overflow: hidden;
@@ -793,7 +810,7 @@ body {
     height: 3rem;
     width: 2rem;
     padding: 0.1rem;
-    margin:  0.5rem;
+    margin: 0.5rem;
   }
 
   .age .a-box .a-in-box {
@@ -815,7 +832,6 @@ body {
 /* ========== About Section Responsivenesss Start ========== */
 
 @media only screen and (max-width: 1050px) {
-  
   .home-content {
     padding: 0;
     margin: -10px;

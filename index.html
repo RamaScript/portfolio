@@ -13,7 +13,7 @@
 
 <body>
     <div class="main">
-        
+
         <div class="mobile-name-banner">
             <h1>Ramanand Kumar</h1>
             <h2>Software Developer</h2>
@@ -37,7 +37,7 @@
                 <img src="images/myP.png" alt="">
             </div>
             <div class="line"></div>
-            <ul>
+            <ul id="nav-links-all">
                 <li><a href="#home"><i class="fa-solid fa-house nav-icons"></i>Home</a></li>
                 <li><a href="#about"><i class="fa-solid fa-user nav-icons"></i>About</a></li>
                 <li><a href="#projects"><i class="fa-solid fa-sheet-plastic nav-icons"></i>Projects</a></li>
@@ -50,7 +50,7 @@
 
         <div class="sections">
 
-            <section class="home" id="home">
+            <section class="home scrollspy" id="home">
                 <div class="home-content">
                     <div class="text-1">Hello, my name is</div>
                     <div class="text-2">
@@ -73,7 +73,7 @@
 
             </section>
 
-            <section class="about" id="about">
+            <section class="about scrollspy" id="about">
                 <div class="section-banner">
                     <h2>About me</h2>
                 </div>
@@ -94,51 +94,51 @@
                             target="_blank">Download Resume</a>
                     </div>
                 </div>
-
-            </section>
-            <div class="age-section">
-                <div class="age-container">
-                    <div class="age">
-                        <div class="a-box">
-                            <div class="a-in-box">
-                                <p id="y"></p>
+                <div class="age-section">
+                    <div class="age-container">
+                        <div class="age">
+                            <div class="a-box">
+                                <div class="a-in-box">
+                                    <p id="y"></p>
+                                </div>
+                                <p>Years</p>
                             </div>
-                            <p>Years</p>
-                        </div>
-                        <div class="a-box">
-                            <div class="a-in-box">
-                                <p id="mo"></p>
+                            <div class="a-box">
+                                <div class="a-in-box">
+                                    <p id="mo"></p>
+                                </div>
+                                <p>Months</p>
                             </div>
-                            <p>Months</p>
-                        </div>
-                        <div class="a-box">
-                            <div class="a-in-box">
-                                <p id="d"></p>
+                            <div class="a-box">
+                                <div class="a-in-box">
+                                    <p id="d"></p>
+                                </div>
+                                <p>Days</p>
                             </div>
-                            <p>Days</p>
-                        </div>
-                        <div class="a-box">
-                            <div class="a-in-box">
-                                <p id="h"></p>
+                            <div class="a-box">
+                                <div class="a-in-box">
+                                    <p id="h"></p>
+                                </div>
+                                <p>Hours</p>
                             </div>
-                            <p>Hours</p>
-                        </div>
-                        <div class="a-box">
-                            <div class="a-in-box">
-                                <p id="mi"></p>
+                            <div class="a-box">
+                                <div class="a-in-box">
+                                    <p id="mi"></p>
+                                </div>
+                                <p>Minutes</p>
                             </div>
-                            <p>Minutes</p>
-                        </div>
-                        <div class="a-box">
-                            <div class="a-in-box">
-                                <p id="s"></p>
+                            <div class="a-box">
+                                <div class="a-in-box">
+                                    <p id="s"></p>
+                                </div>
+                                <p>Seconds</p>
                             </div>
-                            <p>Seconds</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <section class="projects" id="projects">
+
+            </section>
+            <section class="projects scrollspy" id="projects">
                 <div class="section-banner">
                     <h2>Projects</h2>
                 </div>
@@ -184,7 +184,7 @@
                 </div>
             </section>
 
-            <section class="skills" id="skills">
+            <section class="skills scrollspy" id="skills">
                 <div class="section-banner">
                     <h2>skills</h2>
                 </div>
@@ -292,7 +292,7 @@
 
             </section>
 
-            <section class="education" id="education">
+            <section class="education scrollspy" id="education">
                 <div class="section-banner">
                     <h2>education</h2>
                 </div>
@@ -346,14 +346,14 @@
                 </div>
             </section>
 
-            <section class="certificates" id="certificates">
+            <section class="certificates scrollspy" id="certificates">
                 <div class="section-banner">
                     <h2>Certificates</h2>
                 </div>
 
             </section>
 
-            <section class="contact" id="contact">
+            <section class="contact scrollspy" id="contact">
                 <div class="section-banner">
                     <h2>contact</h2>
                 </div>
@@ -377,6 +377,8 @@
     </div>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
+    
+
 </body>
 
 </html>
