@@ -93,19 +93,19 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      console.log(
-        `Section ${entry.target.id} is ${
-          entry.isIntersecting ? "" : "not "
-        }intersecting`
-      );
+      // console.log(
+      //   `Section ${entry.target.id} is ${
+      //     entry.isIntersecting ? "" : "not "
+      //   }intersecting`
+      // );
       if (entry.isIntersecting) {
         navLinks.forEach((link) => {
           link.classList.remove("active");
           if (link.getAttribute("href").substring(1) === entry.target.id) {
             link.classList.add("active");
-            console.log(
-              `Active class added to link: ${link.getAttribute("href")}`
-            );
+            // console.log(
+            //   `Active class added to link: ${link.getAttribute("href")}`
+            // );
           }
         });
       }
@@ -113,8 +113,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }, observerOptions);
   sections.forEach((section) => {
     observer.observe(section);
-    console.log(`Observer is observing section: ${section.id}`);
+    // console.log(`Observer is observing section: ${section.id}`);
   });
 });
 
 // ========================== ScrollSpy END ==========================
+
+// ======================= Certificate show btn ============
+
+let showButtons = document.querySelectorAll(".show");
+
+showButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    let fview = button.closest(".frame").querySelector(".fview");
+    if (button.innerText === "Show") {
+      fview.style.display = "flex";
+      button.innerText = "Hide";
+    } else {
+      fview.style.display = "none";
+      button.innerText = "Show";
+    }
+  });
+});
+

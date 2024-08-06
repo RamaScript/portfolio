@@ -749,6 +749,144 @@ body {
   min-height: 100vh;
 }
 
+.certificate-content {
+  margin: 0.5rem;
+  padding: 0.25rem;
+}
+
+.frame {
+  border: 2px solid var(--main-color);
+  border-radius: 1rem 1rem 0 0;
+  margin-right: 2.25rem;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to right, var(--main-color) -120%, var(--nav-color));
+  background-color: var(--secondry-bg-color);
+  cursor: pointer;
+}
+
+.ftop {
+  display: flex;
+  padding: 0.5rem;
+  /* border: 1px solid var(--main-color); */
+  height: 15rem;
+  transition: 0.3s;
+justify-content: space-between;
+}
+
+.category {
+  width: 60%;
+  /* border: 1px solid var(--main-color); */
+  font-size: 4rem;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.preview {
+  width: 50%;
+  /* border: 1px solid var(--main-color); */
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  right: 0;
+}
+
+.preview img {
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid var(--main-color);
+}
+
+.fbtm {
+  padding-right: 1rem;
+  text-align: right;
+  height: 0;
+}
+
+.show{
+  /* position: absolute; */
+  position: relative;
+  top: -4rem;
+  
+}
+
+.btn {
+  color: var(--primary-bg-color);
+  background-color: var(--main-color);
+  font-size: 1.25rem;
+  padding: 0.25rem 1rem;
+  border-radius: 12px;
+  border: 2px solid var(--main-color);
+  margin: 0.25rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: none;
+  color: var(--main-color);
+  /* opacity: 0.5; */
+  transition: 0.5s;
+  box-shadow: 0 0 10px var(--main-color), 0 0 5px var(--main-color) inset;
+}
+
+.fview {
+  padding: 0.5rem;
+  /* border: 1px solid var(--main-color); */
+  display: none;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  border-top: 2px solid var(--main-color);
+  transition: 0.3s ;
+  background: var(--bg-img);
+  background-color: var(--primary-bg-color);
+}
+
+.view-cer {
+  margin: 1rem;
+  border: 2px dotted var(--main-color);
+  border-radius: 15px;
+  width: 30%;
+  /* height: 24rem; */
+  height: fit-content;
+}
+
+.view-cer .details h1 {
+  font-size: 2rem;
+  text-align: center;
+  background-color: var(--main-color);
+  color: var(--home-color);
+  /* margin: 0 2rem; */
+  border-radius: 15px 15px 0 0;
+}
+
+.cer-img {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  /* margin-top: 0.25rem; */
+  /* margin-bottom: 0.5rem; */
+}
+
+.cer-img img {
+  /* width: 90%; */
+  border: 1px solid var(--primary-bg-color);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.view-cer .btns {
+  padding: 0.5rem;
+  /* border-top: 1px solid var(--main-color); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom:0;
+}
+
 /* contact section styling */
 
 .contact {
@@ -851,7 +989,6 @@ body {
   transition: all 0.3s ease;
   background-color: transparent;
   color: var(--text-color);
-
 }
 
 .contact .right form .field input:focus,
