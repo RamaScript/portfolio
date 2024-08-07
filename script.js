@@ -148,6 +148,11 @@ function appScript() {
   );
 }
 
+function validateEmail(email) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
+
 function thank(event) {
   event.preventDefault(); // Prevent form submission until validation is complete
 
@@ -164,6 +169,11 @@ function thank(event) {
     msg.value === ""
   ) {
     p.innerHTML = "Please fill all the fields!!";
+    setTimeout(() => {
+      p.innerHTML = "";
+    }, 3000);
+  } else if (!validateEmail(email.value)) {
+    p.innerHTML = "Please enter a valid email address!";
     setTimeout(() => {
       p.innerHTML = "";
     }, 3000);
