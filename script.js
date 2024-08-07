@@ -136,3 +136,49 @@ showButtons.forEach((button) => {
   });
 });
 
+// ======================== Contact Section Start===================
+
+function appScript() {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbz9R81FxlG-ZtVzllIdXvR9v3Jp4vBOeENBBGHMMsKqIoKHRbBTCuch0GAXJnulbYYyyw/exec";
+  const form = document.forms["contact"];
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) }).catch(
+    (error) => console.error("Error!", error.message)
+  );
+}
+
+function thank(event) {
+  event.preventDefault(); // Prevent form submission until validation is complete
+
+  let name = document.querySelector("#name-id");
+  let email = document.querySelector("#email-id");
+  let sub = document.querySelector("#subject-id");
+  let msg = document.querySelector("#msg-id");
+  let p = document.querySelector("#msg-sent");
+
+  if (
+    name.value === "" ||
+    email.value === "" ||
+    sub.value === "" ||
+    msg.value === ""
+  ) {
+    p.innerHTML = "Please fill all the fields!!";
+    setTimeout(() => {
+      p.innerHTML = "";
+    }, 3000);
+  } else {
+    appScript(); // Submit the form after validation
+
+    name.value = "";
+    email.value = "";
+    sub.value = "";
+    msg.value = "";
+    p.innerHTML = "Thank you! Message sent successfully.";
+    setTimeout(() => {
+      p.innerHTML = "";
+    }, 3000);
+  }
+}
+
+// ======================== Contact Section END===================

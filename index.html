@@ -1102,8 +1102,7 @@
                                     placeholder="Message.."></textarea>
                             </div>
                             <div class="button-area">
-                                <button type="submit" onclick="thank()">Send message</button>
-
+                                <button type="submit" onclick="thank(event)">Send message</button>
                             </div>
                             <p id="msg-sent"></p>
                         </form>
@@ -1128,43 +1127,7 @@
     </div>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
-    <script>
-        function appScript() {
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbz9R81FxlG-ZtVzllIdXvR9v3Jp4vBOeENBBGHMMsKqIoKHRbBTCuch0GAXJnulbYYyyw/exec'
-            const form = document.forms['contact']
-
-            form.addEventListener('submit', e => {
-                e.preventDefault()
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    // .then(response => alert("Thank you! your form is submitted successfully."))
-                    // .then(() => { window.location.reload(); }) 
-                    .catch(error => console.error('Error!', error.message))
-            })
-        }
-        function thank() {
-            let name = document.querySelector('#name-id');
-            let email = document.querySelector('#email-id');
-            let sub = document.querySelector('#subject-id');
-            let msg = document.querySelector('#msg-id');
-            let p = document.querySelector('#msg-sent');
-            if (name.value == '' || email.value == '' || sub.value == '' || msg.value == '') {
-                p.innerHTML = 'Please fill all the feilds!!';
-                setTimeout(() => {
-                    p.innerHTML = '';
-                }, 3000);
-            } else {
-                name.value = '';
-                email.value = '';
-                sub.value = '';
-                msg.value = '';
-                p.innerHTML = 'Thank you! Message sent successfully.';
-                appScript();
-                setTimeout(() => {
-                    p.innerHTML = '';
-                }, 3000);
-            }
-        }
-    </script>
+    
 
 </body>
 
