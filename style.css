@@ -780,7 +780,7 @@ body {
   );
   .show {
     box-shadow: 0 0 10px var(--main-color);
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.5s;
   }
 }
