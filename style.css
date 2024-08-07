@@ -757,7 +757,7 @@ body {
 
 .frame {
   border: 2px solid var(--main-color);
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 1.5rem 1.5rem 0 0;
   margin-right: 2.25rem;
   transition: 0.3s;
   margin-bottom: 1rem;
@@ -856,6 +856,7 @@ body {
   /* border: 1px solid var(--main-color); */
   display: none;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   /* justify-content: center; */
   border-top: 2px solid var(--main-color);
   transition: 0.3s;
@@ -867,11 +868,12 @@ body {
   margin: 1rem;
   border: 2px dotted var(--main-color);
   border-radius: 17px;
-  width: 30%;
+  width: 28%;
   /* height: 24rem; */
   height: fit-content;
   transition: 0.3s;
   overflow: hidden;
+  
 }
 
 .view-cer:hover {
@@ -1193,16 +1195,44 @@ body {
     padding: 0.5rem;
     font-size: 1rem;
   }
+  .certificate-section-banner h2{
+    /* color: red; */
+    font-size: 2rem;
+  }
+  .frame{
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+  }
+  .category{
+    width: 35%;
+    font-size: 2.5rem;
+  }
+  .preview{
+    width: 60%;
+  }
+  .view-cer{
+    width: 40%;
+  }
 }
+
+@media only screen and (max-width:750px){
+  .preview{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .view-cer{
+    width: 90%;
+  }
+} 
 
 /* ========== About Section Responsivenesss END ========== */
 
 /* ========== Mobile Menu Responsivenesss Start ========== */
 
 @media only screen and (max-width: 900px) {
-  .certificates {
-    display: none;
-  }
+  
   .sm-icons {
     display: none;
   }
@@ -1291,3 +1321,5 @@ body {
 }
 
 /* ========== Mobile Menu Responsivenesss END ========== */
+
+

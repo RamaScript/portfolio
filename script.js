@@ -1,4 +1,5 @@
-// ========================== Dark mode / Light mode -  Start ==========================
+// 1. ========================== Dark mode / Light mode -  Start ==========================
+
 let mode = document.querySelector(".day-night-mode");
 mode.addEventListener("click", () => {
   // console.log("button click to ho rha hai");
@@ -9,9 +10,11 @@ mode.addEventListener("click", () => {
     mode.innerHTML = '<i class="fa-solid fa-sun"></i>';
   }
 });
+
 // ========================== Dark mode / Light mode -  END ==========================
 
-// typing text animation script
+// 2. ====================== Typing Text Animation Start ==============================
+
 function startTypingAnimation(selector, strings) {
   new Typed(selector, {
     strings: strings,
@@ -22,7 +25,10 @@ function startTypingAnimation(selector, strings) {
 }
 startTypingAnimation(".typing-2", ["Student", "Web Developer", "Programmer"]);
 startTypingAnimation(".typing", ["Student", "Web Developer", "Programmer"]);
-// ========================== Age Timer start ==========================
+
+// ====================== Typing Text Animation END ==============================
+
+// 3. ========================== Age Timer start ==========================
 
 function calculateAge(dob) {
   const birthDate = new Date(dob);
@@ -82,7 +88,7 @@ updateAge(); // Initial call to display the age immediately
 
 // ========================== Age Timer End ==========================
 
-// ========================== ScrollSpy Start ==========================
+// 4. ========================== ScrollSpy Start ==========================
 
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".scrollspy");
@@ -119,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ========================== ScrollSpy END ==========================
 
-// ======================= Certificate show btn ============
+// 5. ======================= Certificate show btn Start============
 
 let showButtons = document.querySelectorAll(".show");
 
@@ -136,7 +142,9 @@ showButtons.forEach((button) => {
   });
 });
 
-// ======================== Contact Section Start===================
+// ======================= Certificate show btn END============
+
+// 6. ======================== Contact Section Start===================
 
 function appScript() {
   const scriptURL =
@@ -149,7 +157,7 @@ function appScript() {
 }
 
 function validateEmail(email) {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //regular expression for email by Eqbal Ahamad sir
   return emailPattern.test(email);
 }
 
